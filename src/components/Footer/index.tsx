@@ -26,6 +26,11 @@ const Footer = () => {
     if (!navigator.mediaDevices?.enumerateDevices) {
       console.log("enumerateDevices() not supported.");
     } else {
+      navigator.mediaDevices
+        .getUserMedia({ audio: true, video: true })
+        .then((stream) => {
+          stream.getTracks().forEach((track) => track.stop());
+        });
       // List cameras and microphones.
       navigator.mediaDevices
         .enumerateDevices()
