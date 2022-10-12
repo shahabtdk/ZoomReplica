@@ -75,8 +75,6 @@ const Footer = () => {
         }))}
     />
   );
-  console.log(audioDevice);
-  console.log(videoDevice);
   return (
     <Wrapper>
       <IconWrapper>
