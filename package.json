@@ -8,11 +8,13 @@
     "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.13",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
+    "antd": "^4.23.5",
+    "jotai": "^1.8.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-media-stream": "^1.0.1",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.6",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
@@ -39,5 +41,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "@types/styled-components": "^5.1.26"
   }
 }
