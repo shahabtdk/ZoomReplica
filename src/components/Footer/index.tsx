@@ -30,18 +30,18 @@ const Footer = () => {
         .getUserMedia({ audio: true, video: true })
         .then((stream) => {
           stream.getTracks().forEach((track) => track.stop());
+          navigator.mediaDevices
+            .enumerateDevices()
+            .then((devices) => {
+              // @ts-ignore
+              window.__DEVICES__ = devices;
+              setDevices(devices);
+            })
+            .catch((err) => {
+              console.error(`${err.name}: ${err.message}`);
+            });
         });
       // List cameras and microphones.
-      navigator.mediaDevices
-        .enumerateDevices()
-        .then((devices) => {
-          // @ts-ignore
-          window.__DEVICES__ = devices;
-          setDevices(devices);
-        })
-        .catch((err) => {
-          console.error(`${err.name}: ${err.message}`);
-        });
     }
   }, []);
 
